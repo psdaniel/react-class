@@ -16,6 +16,18 @@ h1 {
   font-size: 1.4rem;
 }
 
+.App {
+  display: flex;
+  flex-direction: column;
+  max-width: 40rem;
+  margin: 0 auto;
+  min-height: calc(100vh + 10rem);
+}
+
+.content {
+  flex: 1;
+}
+
 .animeLeft {
   transform: translateX(-20px);
   opacity: 0;
@@ -26,5 +38,20 @@ h1 {
   to {
     transform: initial;
     opacity: initial;
+  }
+}
+
+.loading {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 10px soldi #ccc;
+  border-right-color: transparent;
+  animation: loading 1s infinite;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
   }
 }
